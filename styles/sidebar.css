@@ -1,0 +1,137 @@
+.sidebar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  border-right: 1px solid;
+  border-color: #d8d8d8;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: width 0.3s ease;
+}
+p {
+  margin: 0;
+}
+.nav-bar-text {
+  margin-top: 4px;
+}
+.instagram-text-logo {
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+}
+.instagram-black-icon {
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  display: none;
+}
+.nav-bar {
+  display: flex;
+  padding: 16px 25px;
+  cursor: pointer;
+  width: 1fr;
+  transition: all 0.15s;
+  border-radius: 5px;
+}
+.nav-bar:hover {
+  background-color: #f1f1f1;
+}
+.nav-bar:active {
+  transform: scale(0.95);
+  background-color: #d8d8d8;
+}
+.home-icon {
+  height: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  height: 25px;
+  margin-right: 20px;
+}
+
+.explore-icon {
+  height: 25px;
+  margin-right: 20px;
+}
+.reels-icon {
+  height: 25px;
+  margin-right: 20px;
+}
+.dm-icon {
+  height: 25px;
+  margin-right: 20px;
+}
+.notifications-icon {
+  height: 25px;
+  margin-right: 20px;
+}
+.create-icon {
+  height: 25px;
+  margin-right: 20px;
+}
+.profile-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.menu {
+  display: flex;
+  margin-top: 100px;
+  padding: 16px 25px;
+  cursor: pointer;
+  width: 1fr;
+  transition: all 0.15s;
+}
+.menu:hover {
+  background-color: #f1f1f1;
+}
+.menu:active {
+  transform: scale(0.95);
+}
+.hamburger-menu {
+  height: 30px;
+  margin-right: 20px;
+}
+@media (max-width: 1400px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  .nav-bar-text {
+    display: none;
+  }
+
+  .instagram-text-logo {
+    display: none;
+  }
+  .instagram-black-icon {
+    display: block;
+  }
+
+  .nav-bar,
+  .menu {
+    padding: 16px 24px;
+  }
+
+  .home-icon,
+  .search-icon,
+  .explore-icon,
+  .reels-icon,
+  .dm-icon,
+  .notifications-icon,
+  .create-icon,
+  .profile-icon,
+  .hamburger-menu {
+    margin-right: 0;
+  }
+}

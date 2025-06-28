@@ -1,0 +1,80 @@
+.stories {
+  display: flex;
+  margin-left: 250px; /* Match the default sidebar width */
+  transition: margin-left 0.3s ease;
+  justify-content: flex-start; /* Changed from center to left alignment */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  max-width: calc(
+    100% - 250px - 350px
+  ); /* Reduced width to account for sidebar and suggestions */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px 0 10px 20px; /* Added left padding to push content away from sidebar */
+  scrollbar-width: thin; /* For Firefox */
+  -ms-overflow-style: none;
+}
+.stories::-webkit-scrollbar {
+  height: 6px; /* Small scrollbar */
+}
+.stories::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent scrollbar */
+  border-radius: 3px;
+}
+@media (max-width: 1200px) {
+  .stories {
+    max-width: calc(100% - 350px); /* Adjust for smaller screens */
+  }
+}
+
+/* Add media query to match the sidebar collapse breakpoint */
+@media (max-width: 1400px) {
+  .stories {
+    margin-left: 80px; /* Match the collapsed sidebar width */
+    max-width: calc(100% - 80px); /* Update max-width for collapsed sidebar */
+    justify-content: flex-start; /* Align stories to the left */
+    padding-left: 10px;
+  }
+}
+/* Story wrapper to create gradient border effect */
+.story-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 calc(16.666% - 10px); /* Each block takes 1/6 of space minus margin */
+  min-width: 100px; /* Minimum width to prevent too small stories */
+  max-width: 115px;
+  margin: 0 5px;
+}
+.story-wrapper {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.story-profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  background-color: black; /* Add white background for transparent images */
+}
+.story-username {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
