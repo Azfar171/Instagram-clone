@@ -69,7 +69,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
-  background-color: black; /* Add white background for transparent images */
+  background-color: black; /* Add black background for transparent images */
 }
 .story-username {
   color: black;
